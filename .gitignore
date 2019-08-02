@@ -1,3 +1,5 @@
+## Archives
+*.tar.gz
 ## Environment normalization:
 /.bundle
 /vendor/bundle
