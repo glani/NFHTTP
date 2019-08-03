@@ -23,6 +23,7 @@
 #include "RequestImplementation.h"
 
 #include <cstdlib>
+#include <sstream>
 
 #include <nlohmann/json.hpp>
 

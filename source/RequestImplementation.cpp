@@ -18,7 +18,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 #include "RequestImplementation.h"
+
+#include <sstream>
 
 #include <nlohmann/json.hpp>
 
