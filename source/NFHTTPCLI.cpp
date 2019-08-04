@@ -25,6 +25,7 @@
 #include <iostream>
 
 #include <nlohmann/json.hpp>
+#include <iomanip>
 
 int main(int argc, char *argv[]) {
   // Parse our arguments
