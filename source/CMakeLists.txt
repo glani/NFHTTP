@@ -83,12 +83,13 @@ if(NOT WIN32 AND NOT ANDROID)
   set(LINK_LIBRARIES sqlite pthread)
 endif()
 
-add_executable(NFHTTPCLI NFHTTPCLI.cpp)
-target_include_directories(NFHTTPCLI PUBLIC "${NFHTTP_INCLUDE_DIRECTORY}"
-  "${NFHTTP_LIBRARIES_DIRECTORY}/sqlite"
-  "${NFHTTP_LIBRARIES_DIRECTORY}/curl/include"
-  ${CPPREST_INCLUDE_DIR}
-  ${OUTPUT_DIRECTORY})
+# it does not work link error
+#add_executable(NFHTTPCLI NFHTTPCLI.cpp)
+#target_include_directories(NFHTTPCLI PUBLIC "${NFHTTP_INCLUDE_DIRECTORY}"
+#  "${NFHTTP_LIBRARIES_DIRECTORY}/sqlite"
+#  "${NFHTTP_LIBRARIES_DIRECTORY}/curl/include"
+#  ${CPPREST_INCLUDE_DIR}
+#  ${OUTPUT_DIRECTORY})
 
 if(USE_CURL)
   list(APPEND LINK_LIBRARIES libcurl)
@@ -111,7 +112,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 endif()
 
 target_link_libraries(NFHTTP PUBLIC ${LINK_LIBRARIES} nlohmann_json)
-target_link_libraries(NFHTTPCLI NFHTTP nlohmann_json)
+#target_link_libraries(NFHTTPCLI NFHTTP nlohmann_json)
 
 if(USE_CURL)
   target_compile_definitions(NFHTTP PRIVATE USE_CURL=1)
