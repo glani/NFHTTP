@@ -1,3 +1,5 @@
+## boost
+libraries/boost*
 ## Archives
 *.tar.gz
 ## Environment normalization:
